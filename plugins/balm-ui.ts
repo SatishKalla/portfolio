@@ -1,4 +1,3 @@
-import { defineNuxtPlugin } from '#app';
 import BalmUI from 'balm-ui';
 import BalmUIPlus from 'balm-ui-plus';
 
