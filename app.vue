@@ -8,11 +8,11 @@
         "A good developer is always learning, because the technology is always changing"
       </div>
       <div class="avatar">
-        <img src="~/assets/images/avatar.jpg" alt="Avatar" style="border-radius: 50%;"/>
+        <img src="~/assets/images/avatar.png" alt="Avatar" style="border-radius: 50%;width: 40%;"/>
       </div>
       <div class="basic-details">
         <strong>Satish Kalla</strong><br/>
-        <span style="font-size: small;">I'm a professional <span style="color: blueviolet;"><strong>Developer!</strong></span></span>
+        <span style="font-size: small;">I'm a professional <span style="color: #6200ee;"><strong>Developer!</strong></span></span>
       </div>
       <div class="social">
           <a class="bg-image github" href="https://github.com/SatishKalla" style="margin-right:3px" target="_blank">
@@ -20,7 +20,7 @@
           <a class="bg-image linkedin" href="https://www.linkedin.com/in/satish-kumar-kalla-9b5011b2/" target="_blank">
           </a>
       </div>
-      <div>
+      <div style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
         <div class="contact">
           <ui-icon size=18>email</ui-icon>
           <span class="icon-caption" style="padding-right:10px">k.satish1223@gmail.com</span>
@@ -31,21 +31,12 @@
         </div>
       </div>
       <div class="actions">
-        <ui-button class="btn" icon="person" raised @click="setPageTitle('About Me')">
-          <NuxtLink class="btn-link" to="/">about</NuxtLink>
-        </ui-button>
-        <ui-button class="btn" icon="work_history" raised @click="setPageTitle('Experience')">
-          <NuxtLink class="btn-link" to="/experience">experience</NuxtLink>
-        </ui-button>
-        <ui-button class="btn" icon="star_half" raised @click="setPageTitle('Skills')">
-          <NuxtLink class="btn-link" to="/skills">skills</NuxtLink>
-        </ui-button>
-        <ui-button class="btn" icon="fact_check" raised @click="setPageTitle('Projects')">
-          <NuxtLink class="btn-link" to="/projects">projects</NuxtLink>
-        </ui-button>
-        <ui-button class="btn" icon="badge" raised @click="setPageTitle('Certifications')">
-          <NuxtLink class="btn-link" to="/certifications">certifications</NuxtLink>
-        </ui-button>
+        <NuxtLink class="btn-link" to="/"><ui-button class="btn" icon="person" raised @click="setPageTitle('About me')">about
+        </ui-button></NuxtLink>
+        <NuxtLink class="btn-link" to="/experience"><ui-button class="btn" icon="work_history" raised @click="setPageTitle('Work experience')">Work</ui-button></NuxtLink>      
+        <NuxtLink class="btn-link" to="/skills"><ui-button class="btn" icon="star_half" raised @click="setPageTitle('Skills')">skills</ui-button></NuxtLink>      
+        <NuxtLink class="btn-link" to="/projects"><ui-button class="btn" icon="fact_check" raised @click="setPageTitle('Projects')">projects</ui-button></NuxtLink>      
+        <NuxtLink class="btn-link" to="/certifications"><ui-button class="btn" icon="badge" raised @click="setPageTitle('Certifications')">certifications</ui-button></NuxtLink>
       </div>
     </div>
     <ui-divider type="|" class="vertical-divider">
@@ -64,7 +55,6 @@
     </div>
   </div>
 </template>
-
 
 <script setup>
   const layout = "default";
@@ -86,6 +76,8 @@
 body {
   background-color: #fff;
   color: #091a28;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -102,17 +94,6 @@ body {
   width: 60%;
 }
 
-/* Dark mode */
-.dark-mode body {
-  background-color: #091a28;
-  color: #ebf4f1;
-}
-.dark-mode .mdc-divider__text:before {
-  background-color: #ebf4f1;
-}
-.dark-mode .mdc-divider__text:after {
-  background-color: #ebf4f1;
-}
 .bg-image {
   background-size: contain;
   padding: 10px;
@@ -125,6 +106,20 @@ body {
   background-image: url('~/assets/images/logo/In-Blue.png');
 }
 
+/* Dark mode */
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
+.dark-mode .mdc-divider__text:before {
+  background-color: #ebf4f1;
+}
+.dark-mode .mdc-divider__text:after {
+  background-color: #ebf4f1;
+}
+.dark-mode .mdc-divider--no-text {
+  background-color: #ebf4f1;
+}
 .dark-mode .github {
   background-image: url('~/assets/images/logo/github-mark-white.png');
 }
@@ -154,6 +149,7 @@ body {
 .logo , .avatar, .basic-details, .actions {
   margin-top: 15px;
   margin-bottom: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Social */
@@ -175,5 +171,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2px;
+}
+
+.mdc-image-list__image {
+  border-radius: 8px;
 }
 </style>

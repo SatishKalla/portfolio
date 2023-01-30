@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <span class="header-title"><strong>{{ appConfig.pageTitle || "About Me" }}</strong></span>
+        <span class="header-title"><strong>{{ appConfig.pageTitle || "About me" }}</strong></span>
         <img src="~/assets/images/logo/stamp.png" alt="Logo" style="width: 10%;"/>
     </div>
     <NuxtPage />
