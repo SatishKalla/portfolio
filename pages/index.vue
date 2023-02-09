@@ -22,6 +22,10 @@
       justify-content: center;
       align-items: center;
       margin-top: 5%;">
-    <ui-button icon="file_download">Download Resume</ui-button>
+    <ui-button icon="file_download"><a class="btn-link" href="/uploads/SatishKalla.pdf" download>Download Resume</a></ui-button>
   </div>
 </template>
+<script setup>
+const appConfig = useAppConfig();
+appConfig.pageTitle = "About me";
+</script>

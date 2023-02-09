@@ -131,6 +131,8 @@ const pastSkills = [
     name: 'Bull Js'
   }
 ];
+const appConfig = useAppConfig();
+appConfig.pageTitle = 'Skills';
 </script>
 <style>
 .legend {

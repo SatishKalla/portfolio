@@ -14,6 +14,9 @@
           applications</div>
         <div v-shape.large="'4px 4px 4px 4px'" class="highlight">Deploying the applications and Providing ongoing
           maintenance and support</div>
+        <div v-shape.large="'4px 4px 4px 4px'" class="highlight">
+          Implementation and technical support of SFCS application in Srilanka for brandix.
+        </div>
       </div>
     </div>
   </section>
@@ -35,39 +38,13 @@
   </section>
 </template>
 <script setup>
-const companies = [
-  {
-    name: "Reflections Info Systems PVT LTD",
-    url: "https://reflectionsglobal.com/",
-    logoClass: "logo-base reflections-logo",
-    designations: [
-      {
-        name: "Senior Software Engineer",
-        term: "1 year 5 months*"
-      }
-    ],
-    present: true
-  },
-  {
-    name: "Schemax Export Techno Craft Pvt LTD",
-    url: "https://www.schemaxtech.com/",
-    logoClass: "logo-base schemax-logo",
-    designations: [
-      {
-        name: "Senior Software Engineer",
-        term: "5 years 8 months"
-      },
-      {
-        name: "Senior Software Engineer",
-        term: "2 years"
-      }
-    ],
-    present: false
-  }
-]
+import data from "~/data/companies.json";
+const companies = data;
 const goToWebsite = (url) => {
   window.open(url, '_blank');
 }
+const appConfig = useAppConfig();
+appConfig.pageTitle = "Work Experience";
 </script>
 <style>
 .years {

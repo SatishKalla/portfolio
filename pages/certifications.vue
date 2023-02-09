@@ -22,6 +22,8 @@
 <script>
 export default {
     data() {
+        const appConfig = useAppConfig();
+        appConfig.pageTitle = "Certifications";
         return {
             showModal: false,
             link: null,

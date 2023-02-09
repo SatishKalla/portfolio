@@ -31,18 +31,19 @@
         </div>
       </div>
       <div class="actions">
-        <NuxtLink class="btn-link" to="/"><ui-button class="btn" icon="person" raised @click="setPageTitle('About me')">about
+        <NuxtLink class="btn-link" to="/"><ui-button class="btn" icon="person" raised>about
         </ui-button></NuxtLink>
-        <NuxtLink class="btn-link" to="/experience"><ui-button class="btn" icon="work_history" raised @click="setPageTitle('Work experience')">Work</ui-button></NuxtLink>      
-        <NuxtLink class="btn-link" to="/skills"><ui-button class="btn" icon="star_half" raised @click="setPageTitle('Skills')">skills</ui-button></NuxtLink>      
-        <NuxtLink class="btn-link" to="/projects"><ui-button class="btn" icon="fact_check" raised @click="setPageTitle('Projects')">projects</ui-button></NuxtLink>      
-        <NuxtLink class="btn-link" to="/certifications"><ui-button class="btn" icon="badge" raised @click="setPageTitle('Certifications')">certifications</ui-button></NuxtLink>
+        <NuxtLink class="btn-link" to="/experience"><ui-button class="btn" icon="work_history" raised>Work</ui-button></NuxtLink>      
+        <NuxtLink class="btn-link" to="/skills"><ui-button class="btn" icon="star_half" raised>skills</ui-button></NuxtLink>      
+        <NuxtLink class="btn-link" to="/projects"><ui-button class="btn" icon="fact_check" raised>projects</ui-button></NuxtLink>      
+        <NuxtLink class="btn-link" to="/certifications"><ui-button class="btn" icon="badge" raised>certifications</ui-button></NuxtLink>
+        <NuxtLink class="btn-link" to="/case-study"><ui-button class="btn" icon="note" raised>case study</ui-button></NuxtLink>
       </div>
     </div>
     <ui-divider type="|" class="vertical-divider">
       <div aria-describedby="modeTip">
-        <ui-tooltip id="modeTip">{{ colorMode.value === "dark" ? "light" : "dark" }} mode</ui-tooltip>
-        <ui-icon-button v-model="mode" :toggle="modeIcon" @click="changeColorMode()"></ui-icon-button>
+        <ui-tooltip id="modeTip">{{ colorMode.preference === "dark" ? "light" : "dark" }} mode</ui-tooltip>
+        <ui-icon-button v-model="mode" :toggle="modeIcon" @click="changeColorMode(mode)"></ui-icon-button>
       </div>
       <template #left>
       </template>
@@ -64,11 +65,8 @@
     off: 'light_mode'
   };  
   const colorMode = useColorMode()
-  const changeColorMode = () => colorMode.value = colorMode.value === 'dark' ? 'light' : 'dark'
-
-  const appConfig = useAppConfig();
-  const setPageTitle = (title) => {
-    appConfig.pageTitle = title;
+  const changeColorMode = (mode) => {
+    colorMode.preference = mode ? 'dark' : 'light';
   }
 </script>
 
@@ -159,7 +157,8 @@ body {
 
 /* Actions */
 .btn {
-  margin: 5px;
+  margin: 3px;
+  height: 30px;
 }
 .btn-link {
   text-decoration: none; 
