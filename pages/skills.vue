@@ -3,9 +3,7 @@
     <span class="present-used">Recently used</span>
     <span class="past-used">Previously used</span>
   </div>
-  <div style="display: flex;
-    flex-direction: column;
-    gap: 20px;">
+  <div class="chip-list">
     <div class="recent">
       <ui-chips>
         <ui-chip v-for="(item, index) in recentSkills" :key="index" :icon="item.icon">
@@ -134,35 +132,3 @@ const pastSkills = [
 const appConfig = useAppConfig();
 appConfig.pageTitle = 'Skills';
 </script>
-<style>
-.legend {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  font-size: 12px;
-  margin-bottom: 15px;
-}
-.present-used::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 5px;  
-  background: #8a19c4;
-}
-.past-used::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 5px;  
-  background: #e0e0e0;
-}
-.recent .mdc-chip {
-  background: #8a19c4;
-  color: white
-}
-.recent .mdc-chip__icon {
-  color: white;
-}
-</style>

@@ -1,11 +1,9 @@
 <template>
-  <ui-card outlined style="text-align: center; background-color: #f7f7f7;">
+  <ui-card outlined class="about-card">
     <ui-card-content>
       <ui-card-text>
-        <div style="font-family: system-ui;
-      font-size: 25px;
-      font-weight: 500;">Hi! 👋</div>
-        <div :class="$tt('body1')" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <div class="greeting">Hi! 👋</div>
+        <div :class="$tt('body1')" class="content">
           <p><i>I'm an experienced software engineer.</i></p>
           <p>
             I have a passion for creating web applications which are stable and maintainable. Worked on a wide range of technologies and have a good understanding of the entire software development cycle.
@@ -18,10 +16,7 @@
       </ui-card-text>
     </ui-card-content>
   </ui-card>
-  <div style="display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 5%;">
+  <div class="download">
     <ui-button icon="file_download"><a class="btn-link" href="/uploads/SatishKalla.pdf" download>Download Resume</a></ui-button>
   </div>
 </template>

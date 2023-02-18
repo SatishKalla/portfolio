@@ -4,6 +4,6 @@ export default defineNuxtConfig({
   alias: {
     'balm-ui-plus': 'balm-ui/dist/balm-ui-plus.js'
   },
-  css: ['balm-ui/dist/balm-ui.css'],
+  css: ['balm-ui/dist/balm-ui.css', '~/assets/scss/main.scss'],
   ssr: false,
 })

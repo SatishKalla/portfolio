@@ -1,14 +1,14 @@
 <template>
-    <ui-card outlined>
-        <div style="text-align: center; font-size: larger;padding: 5px">
+    <ui-card outlined class="project-card">
+        <div class="card-title">
             {{ project.name }}
         </div>
         <ui-list-divider></ui-list-divider>
         <ui-card-content @click="viewProject(project)" title="View details">
             <ui-card-media :class="project.class">
             </ui-card-media>
-            <ui-card-text style="text-align: center;font-size: smaller;">
-                {{ project.role }}
+            <ui-card-text class="designation">
+                <strong>{{ project.role }}</strong>
             </ui-card-text>
         </ui-card-content>
     </ui-card>
@@ -67,13 +67,3 @@ export default {
     },
 }
 </script>
-<style>
-.project-img  {
-    display: flex;
-}
-
-.project-img .mdc-image-list__item {
-    width: 150px;
-    margin: 2px;
-}
-</style>

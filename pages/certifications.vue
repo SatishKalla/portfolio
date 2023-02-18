@@ -5,7 +5,6 @@
           :bg-image="item"
           @click="viewImage(item)"
           title="View image"
-          style="cursor: pointer;border-radius: 8px;"
           >
           </ui-image-item>
       </ui-image-list>
@@ -45,12 +44,3 @@ export default {
     },
 }
 </script>
-<style>
-.cert-img .mdc-image-list__item {
-    width: 200px;
-    margin: 5px;
-}
-.cert-img .mdc-image-list__image {
-  background-position: unset;
-}
-</style>

@@ -1,11 +1,8 @@
 <template>
   <section>
-    <div style="display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-direction: row-reverse;">
+    <div class="summary">
       <div class="years"></div>
-      <div style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;text-align: center;">
+      <div class="bullets">
         <div v-shape.large="'4px 4px 4px 4px'" class="highlight">Building and implementing user interfaces</div>
         <div v-shape.large="'4px 4px 4px 4px'" class="highlight">Developing server-side logics and APIs</div>
         <div v-shape.large="'4px 4px 4px 4px'" class="highlight">Setting up and maintaining databases</div>
@@ -28,8 +25,8 @@
           <ui-card-media rectangle :class="company.logoClass">
           </ui-card-media>
           <ui-card-text v-for="(designation, i) in company.designations" :key="i"
-            style="text-align: center;font-size: smaller;">
-            <span style="font-size: small;"><strong>{{ designation.name }}</strong></span><br />
+            class="designation">
+            <span><strong>{{ designation.name }}</strong></span><br/>
             <span :class="$tt('caption')">{{ designation.term }}</span>
           </ui-card-text>
         </ui-card-content>
@@ -46,46 +43,3 @@ const goToWebsite = (url) => {
 const appConfig = useAppConfig();
 appConfig.pageTitle = "Work Experience";
 </script>
-<style>
-.years {
-  background-size: contain;
-  padding: 60px;
-  background-repeat: no-repeat;
-  background-image: url('~/assets/images/logo/yr-v.png');
-}
-
-.dark-mode .years {
-  background-image: url('~/assets/images/logo/yr-w.png');
-}
-
-.logo-base {
-  background-size: contain;
-  margin: 10px;
-  height: 90px;
-}
-
-.reflections-logo {
-  background-image: url('~/assets/images/logo/reflections.svg');
-}
-
-.schemax-logo {
-  background-image: url('~/assets/images/logo/schemax.png');
-}
-
-.highlight {
-  background-image: linear-gradient(to bottom right, #8a19c4, #838383);
-  margin: 5px;
-  padding: 5px;
-  color: white;
-}
-
-.companies {
-  margin-top: 3%;
-  display: flex;
-  gap: 20px;
-}
-
-.company-card {
-  width: 35%;
-}
-</style>
