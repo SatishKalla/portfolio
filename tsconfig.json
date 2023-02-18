@@ -1,0 +1,10 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "balm-ui-plus": ["node_modules/balm-ui/dist/balm-ui-plus.d.ts"]
+    }
+  }
+}
