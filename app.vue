@@ -12,7 +12,7 @@
       </div>
       <div class="basic-details">
         <div class="title">
-          <span><strong>Satish Kalla</strong></span>
+          <span><strong>Kalla Satish Kumar</strong></span>
           <span class="tag">I'm a professional <span class="role"><strong>Developer!</strong></span></span>
         </div>
         <div class="social">
