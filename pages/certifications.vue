@@ -1,7 +1,7 @@
 <template>
   <div class="cert-img">
     <ui-image-list>
-      <ui-image-item v-for="(name, index) in certifications" :key="index" :bg-image="imgUrl(name)" @click="viewImage(item)"
+      <ui-image-item v-for="(name, index) in certifications" :key="index" :bg-image="imgUrl(name)" @click="viewImage(name)"
         title="View image">
       </ui-image-item>
     </ui-image-list>
@@ -36,7 +36,7 @@ export default {
     },
     viewImage(url) {
       this.showModal = true;
-      this.link = url;
+      this.link = this.imgUrl(url);
     },
     closeModel() {
       this.showModal = false;
