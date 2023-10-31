@@ -1,13 +1,22 @@
-<script setup lang="ts">
-import { ref } from 'vue';
-const count = ref(0);
-</script>
-
 <template>
-  <div id="app">
-    <button type="button" class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800" @click="count++">
-      Count is: {{ count }}
-    </button>
-    <h1>Hello World</h1>
+  <div>
+    <Navbar />
+    <router-view class="content" />
   </div>
 </template>
+
+<script>
+import Navbar from './components/Navbar.vue';
+
+export default {
+  components: {
+    Navbar
+  }
+}
+</script>
+
+<style scoped>
+.content {
+  margin: 1.5rem; /* Adjust the margin as needed */
+}
+</style>

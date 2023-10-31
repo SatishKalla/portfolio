@@ -1,8 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import('preline')
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import('preline');
 
 
 import './assets/css/index.css'
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
