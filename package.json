@@ -16,5 +16,8 @@
   },
   "dependencies": {
     "balm-ui": "^10.13.4"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
